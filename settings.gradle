@@ -1,0 +1,4 @@
+rootProject.name='grassplot'
+include ':app'
+include ':game'
+include ':core'

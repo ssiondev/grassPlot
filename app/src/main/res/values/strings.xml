@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">grassplot</string>
+    <string name="title_game">game</string>
+    <string name="title_core">core</string>
+</resources>

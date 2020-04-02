@@ -1,0 +1,33 @@
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+    implementation project(':core')
+
+    kapt 'androidx.room:room-compiler:2.2.5'
+    kapt "com.google.dagger:dagger-android-processor:2.25.4"
+    kapt "com.google.dagger:dagger-compiler:2.25.4"
+    kapt "com.github.bumptech.glide:compiler:4.10.0"
+}
